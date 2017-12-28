@@ -10,7 +10,7 @@ pipeline {
 	    steps {
 		sh 'node --version'
 		sh 'ps -ef'
-		sh 'sleep 40'
+		sh 'npm install recink'
 	    }
 	}
 
@@ -21,7 +21,7 @@ pipeline {
 	    steps {
 		sh 'node --version'
 		sh 'ps -ef'
-		sh 'sleep 40'
+		sh 'npm install recink'
 	    }
     	}
 	}
