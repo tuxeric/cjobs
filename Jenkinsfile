@@ -7,7 +7,7 @@ pipeline {
             steps {
                 sh 'node --version'
 		sh 'ps -ef'
-		sh 'dmesg'
+		sh 'hostname'
             }
         }
     }
