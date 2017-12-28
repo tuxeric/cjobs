@@ -22,7 +22,7 @@ pipeline {
 		docker { image 'node:carbon' }
 	    }
 	    environment {
-		'npm_config_cache=npm-cache'
+		npm_config_cache='npm-cache'
 	    }
 	    steps {
 		sh 'node --version'
