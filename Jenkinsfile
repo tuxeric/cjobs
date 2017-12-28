@@ -7,6 +7,9 @@ pipeline {
 	    agent {
 		docker { image 'node:boron' }
 	    }
+	    environment {
+		HOME=.
+	    }
 	    steps {
 		sh 'node --version'
 		sh 'ps -ef'
@@ -17,6 +20,9 @@ pipeline {
 	stage('One-8') {
 	    agent {
 		docker { image 'node:carbon' }
+	    }
+	    environment {
+		HOME=.
 	    }
 	    steps {
 		sh 'node --version'
