@@ -1,22 +1,21 @@
 pipeline {
-    agent {
-        docker { image 'node:carbon' }
-    }
-    stages {
-        stage('One-8') {
-            steps {
-                sh 'node --version'
-		sh 'ps -ef'
-		sh 'sleep 40'
-            }
-        }
-    }
-
-    agent {
-	docker { image 'node:boron' }
-    }
+    agent none
     stages {
 	stage('One-6') {
+	    agent {
+		docker { image 'node:boron' }
+	    }
+	    steps {
+		sh 'node --version'
+		sh 'ps -ef'
+		sh 'sleep 40'
+	    }
+	}
+
+	stage('One-8') {
+	    agent {
+		docker { image 'node:carbon' }
+	    }
 	    steps {
 		sh 'node --version'
 		sh 'ps -ef'
