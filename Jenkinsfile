@@ -8,7 +8,7 @@ pipeline {
 		docker { image 'node:boron' }
 	    }
 	    environment {
-		HOME='.'
+		npm_config_cache='npm-cache'
 	    }
 	    steps {
 		sh 'node --version'
@@ -22,7 +22,7 @@ pipeline {
 		docker { image 'node:carbon' }
 	    }
 	    environment {
-		HOME='.'
+		'npm_config_cache=npm-cache'
 	    }
 	    steps {
 		sh 'node --version'
