@@ -1,7 +1,8 @@
 pipeline {
     agent none
     stages {
-      parallel {
+	stage ('Build') {
+	parallel {
 	stage('One-6') {
 	    agent {
 		docker { image 'node:boron' }
@@ -22,7 +23,8 @@ pipeline {
 		sh 'ps -ef'
 		sh 'sleep 40'
 	    }
+    	}
 	}
-      }
+	}
     }
 }
