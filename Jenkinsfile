@@ -8,7 +8,7 @@ pipeline {
 		docker { image 'node:boron' }
 	    }
 	    environment {
-		HOME=.
+		HOME='.'
 	    }
 	    steps {
 		sh 'node --version'
@@ -22,7 +22,7 @@ pipeline {
 		docker { image 'node:carbon' }
 	    }
 	    environment {
-		HOME=.
+		HOME='.'
 	    }
 	    steps {
 		sh 'node --version'
